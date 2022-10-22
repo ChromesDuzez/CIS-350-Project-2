@@ -19,14 +19,14 @@ To get the latest version of the game, you can download/play from one of the fol
 
 ## Feedback
 For anyone who would like to give us feedback about our game please fill out the following form...
-- [Google Form](https://forms.gle/KNsvzmTyPs784A7j9) (aka the Unofficial Playtesting Questionnaire)
+- [Google Form](Error 404) (aka the Unofficial Playtesting Questionnaire)
 
 ## Playing the Dev Branch
 To play the Dev Branch, all you need to do is follow the instructions below to clone the Repository...
 - Install [github desktop](https://desktop.github.com/) (which I recommend for new users). 
 - Either sign in with an existing github account or skip the sign-in step by supplying a username and email.
 - Hit "Clone a repository from the Internet..." then Click the URL button
-- Paste `https://github.com/PlatFormPlayZ/CIS-350-Project-1` into the URL Bar
+- Paste `https://github.com/PlatFormPlayZ/CIS-350-Project-2` into the URL Bar
 - Then choose the file location that you would like to have the repo cloned to (Have a specific folder for it.)
 
 Then Once you have the Repository cloned, you need to open it in Unity...
@@ -44,11 +44,11 @@ Then Once you have the Repository cloned, you need to open it in Unity...
 
 Now that we have the repo cloned, unity installed, all that is left is to open the project in unity...
 - Under the Projects tab in Unity Hub click `open`
-- Navigate to the folder which we cloned our repo to. By Default it is `%UserProfile%/Documents/GitHub/CIS-350-Project-1`
+- Navigate to the folder which we cloned our repo to. By Default it is `%UserProfile%/Documents/GitHub/CIS-350-Project-2`
 - Select Trash_Pick-Up_Simulator folder in the repo then click `open`
 - Once the project has opened, you can play in the development environment. Do so by going to scenes > MainMenu then Play at the top.
 
 If you have an error wher Unity is failing to load the project due to the layout see [this article](https://answers.unity.com/questions/1712501/stuck-in-failed-to-load-window-layout-loop.html).
 To summarize try:
 - Go to `%UserProfile%/AppData/Roaming/Unity/Editor-5.x/Preferences/Layouts` and delete `LastLayout.dwlt`
-- Then go to the cloned Repo folder then  `./Trash_Pick-Up_Simulator/Library/` and delete `CurrentLayout-default.dwlt`
+- Then go to the cloned Repo folder then  `./CO2_Reducer_Simulator/Library/` and delete `CurrentLayout-default.dwlt`
