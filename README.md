@@ -1,9 +1,9 @@
-# CIS-350 Project 1
+# CIS-350 Project 2
 
 ## About
-Trash Pick - Up Simulator Made by John Green, Zach Wilson, Lucas Johnson, Colin Gamagami, Devun Schneider
+CO2 Reducer Simulator Made by John Green, Zach Wilson, Lucas Johnson, Colin Gamagami, Devun Schneider
 
-Walk around a small environment and pick up trash - the trash, however, respawns at a steadily increasing rate. The only way to beat the trash torrent is to recycle/throw away what you collect in return for resources, and use those resources to make tools that will aid you to pick up the trash faster. To win, outlast the timer. If the trash consumes you and the environment - Game Over. 
+[TO-DO]: Description of the game
 
 ## Installing from the GitHub Release
 Choose the Release of your choosing then download the standalone build zip file for that release. They generally follow the naming scheme of "Trash_Pick-Up_Simulator-[State]-V#-#.zip". Then unzip the game folder from the zip file, and place the contents of the game in a directory of your choosing.
@@ -13,9 +13,9 @@ All you need to do is click on the exe to launch and bob's your uncle.
 ## Playing the Game
 To get the latest version of the game, you can download/play from one of the following source(s)
 
-- [GitHub Releases](https://github.com/PlatFormPlayZ/CIS-350-Project-1/releases)
-- [Simmer.io](https://simmer.io/@Ronis/trash-pick-up-simulator)
-- [Play the Dev Branch](https://github.com/PlatFormPlayZ/CIS-350-Project-1/blob/main/README.md#playing-the-dev-branch)
+- [GitHub Releases](https://github.com/PlatFormPlayZ/CIS-350-Project-2/releases)
+- [Simmer.io](https://simmer.io/@Ronis/)
+- [Play the Dev Branch](https://github.com/PlatFormPlayZ/CIS-350-Project-2/blob/main/README.md#playing-the-dev-branch)
 
 ## Feedback
 For anyone who would like to give us feedback about our game please fill out the following form...
