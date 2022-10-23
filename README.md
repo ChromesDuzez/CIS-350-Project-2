@@ -6,8 +6,8 @@ CO2 Reducer Simulator Made by John Green, Zach Wilson, Lucas Johnson, Colin Gama
 [TO-DO]: Description of the game
 
 ## Installing from the GitHub Release
-Choose the Release of your choosing then download the standalone build zip file for that release. They generally follow the naming scheme of "Trash_Pick-Up_Simulator-[State]-V#-#.zip". Then unzip the game folder from the zip file, and place the contents of the game in a directory of your choosing.
-You can send a shortcut for the Trash_Pick-Up_Simulator.exe to the desktop should you wish.
+Choose the Release of your choosing then download the standalone build zip file for that release. They generally follow the naming scheme of "CO2_Reducer_Simulator-[State]-V#-#.zip". Then unzip the game folder from the zip file, and place the contents of the game in a directory of your choosing.
+You can send a shortcut for the CO2_Reducer_Simulator.exe to the desktop should you wish.
 All you need to do is click on the exe to launch and bob's your uncle.
 
 ## Playing the Game
@@ -19,7 +19,7 @@ To get the latest version of the game, you can download/play from one of the fol
 
 ## Feedback
 For anyone who would like to give us feedback about our game please fill out the following form...
-- [Google Form](Error 404) (aka the Unofficial Playtesting Questionnaire)
+- [Google Form](https://forms.gle/izzFPhFre86wpRv69) (aka the Unofficial Playtesting Questionnaire)
 
 ## Playing the Dev Branch
 To play the Dev Branch, all you need to do is follow the instructions below to clone the Repository...
