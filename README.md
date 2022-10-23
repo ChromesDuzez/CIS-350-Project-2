@@ -45,7 +45,7 @@ Then Once you have the Repository cloned, you need to open it in Unity...
 Now that we have the repo cloned, unity installed, all that is left is to open the project in unity...
 - Under the Projects tab in Unity Hub click `open`
 - Navigate to the folder which we cloned our repo to. By Default it is `%UserProfile%/Documents/GitHub/CIS-350-Project-2`
-- Select Trash_Pick-Up_Simulator folder in the repo then click `open`
+- Select CO2_Reducer_Simulator folder in the repo then click `open`
 - Once the project has opened, you can play in the development environment. Do so by going to scenes > MainMenu then Play at the top.
 
 If you have an error wher Unity is failing to load the project due to the layout see [this article](https://answers.unity.com/questions/1712501/stuck-in-failed-to-load-window-layout-loop.html).
