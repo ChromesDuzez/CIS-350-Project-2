@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    void OnCollisionEnter()
+    public GameObject explosionPrefab;
+
+    void OnCollisionEnter(Collision other)
     {
+        if(other.transform.tag == "Car")
+        {
+            Destroy(other.gameObject);
+
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        }    
+
         Destroy(gameObject);
     }
 }

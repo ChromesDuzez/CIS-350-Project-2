@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c101d182063fe174c961963e9d07372c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 9044397617210698453, guid: 1450b109f32fbcc41afa2b9cf1b8f2dc, type: 3}
 --- !u!136 &5905981610555870247
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
