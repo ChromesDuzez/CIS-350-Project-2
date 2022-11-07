@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2020961626354233033, guid: 7203aa9c01b75fd47a2b97505b3656b0, type: 3}
   moveSpeed: 20
-  turnSpeed: 150
+  turnSpeed: 180
   shootForce: 30
   timeBetweenShots: 0.5
 --- !u!33 &3306576
