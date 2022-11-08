@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             HandleMovement(false);
-            HandleShooting(KeyCode.Slash);
+            HandleShooting(KeyCode.RightShift);
         }
     }
 
