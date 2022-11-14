@@ -14,8 +14,20 @@ public class GlobalSettings : MonoBehaviour
     public static bool bUnMuted = true;
     public static float volume = 1.0f;
 
+
     //Control Settings
     public static float mouseSense = 1.0f;
+        //Red Tank Settings
+    public static KeyCode RedTankForward;
+    public static KeyCode RedTankBack;
+    public static KeyCode RedTankRotateLeft;
+    public static KeyCode RedTankRotateRight;
+        //Blue Tank Settings
+    public static KeyCode BlueTankForward;
+    public static KeyCode BlueTankBack;
+    public static KeyCode BlueTankRotateLeft;
+    public static KeyCode BlueTankRotateRight;
+
 
     //Settings Related to Seeing the Tutorial on the start of the game...
     public static bool hasSeenTutorial = false;
