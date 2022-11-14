@@ -10,6 +10,8 @@ using UnityEngine;
 
 public class GlobalSettings : MonoBehaviour
 {
+    List<KeyCode> allKeybindings = new List<KeyCode>();
+    //KeyCode[] allKeybindings = new KeyCode[] { };
     //Audio Settings
     public static bool bUnMuted = true;
     public static float volume = 1.0f;
@@ -32,4 +34,17 @@ public class GlobalSettings : MonoBehaviour
     //Settings Related to Seeing the Tutorial on the start of the game...
     public static bool hasSeenTutorial = false;
     public static string tutorialScene;
+
+    //Setup
+    void Start()
+    {
+        allKeybindings.Add(RedTankForward);
+        allKeybindings.Add(RedTankBack);
+        allKeybindings.Add(RedTankRotateLeft);
+        allKeybindings.Add(RedTankRotateRight);
+        allKeybindings.Add(BlueTankForward);
+        allKeybindings.Add(BlueTankBack);
+        allKeybindings.Add(BlueTankRotateLeft);
+        allKeybindings.Add(BlueTankRotateRight);
+    }
 }
