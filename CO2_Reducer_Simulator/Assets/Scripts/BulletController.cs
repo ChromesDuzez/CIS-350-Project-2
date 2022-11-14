@@ -8,7 +8,7 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.transform.tag == "Car")
+        if(other.transform.CompareTag("Car") || other.transform.CompareTag("EV"))
         {
             Destroy(other.gameObject);
 

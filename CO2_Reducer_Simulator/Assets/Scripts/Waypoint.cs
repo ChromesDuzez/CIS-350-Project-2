@@ -6,7 +6,7 @@ public class Waypoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Car"))
+        if (other.CompareTag("Car") || other.CompareTag("EV"))
         {
             other.gameObject.GetComponent<Car>().GoToNextWaypoint();
         }

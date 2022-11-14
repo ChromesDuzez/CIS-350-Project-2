@@ -13,6 +13,7 @@ TagManager:
   - Value
   - MuteToggle
   - MutedSprite
+  - EV
   layers:
   - Default
   - TransparentFX
