@@ -8,6 +8,8 @@ TagManager:
   - TankBlue
   - Car
   - Waypoint
+  - BulletRed
+  - BulletBlue
   layers:
   - Default
   - TransparentFX

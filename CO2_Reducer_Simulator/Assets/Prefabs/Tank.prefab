@@ -150,6 +150,9 @@ MonoBehaviour:
   turnSpeed: 180
   shootForce: 30
   timeBetweenShots: 0.5
+  stunnedMaterial: {fileID: 2100000, guid: e65f2e535a3cc1a4e909fdb37caebc5e, type: 2}
+  stunDuration: 3
+  invincibilityDuration: 1
 --- !u!33 &3306576
 MeshFilter:
   m_ObjectHideFlags: 0

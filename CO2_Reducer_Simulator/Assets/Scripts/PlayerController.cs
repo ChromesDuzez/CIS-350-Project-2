@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Refrences:")]
     public GameObject bulletPrefab;
+    private Rigidbody rb;
+    private MeshRenderer mr;
+    private MeshRenderer barrelMR;
+    private Transform firePoint;
+    private bool tankRed = false;
 
+    [Header("Movement:")]
     public float moveSpeed = 10f;
     public float turnSpeed = 10f;
+
+    [Header("Shooting:")]
     public float shootForce = 10f;
     public float timeBetweenShots = 0.5f;
     private float nextShotTime;
 
-
-    private bool tankRed = false;
-    private Rigidbody rb;
-    private Transform firePoint;
+    [Header("Stun Effect:")]
+    public Material stunnedMaterial;
+    public float stunDuration = 3f;
+    public float invincibilityDuration = 1f;
+    private Material defaultMaterial;
+    private bool isStunned = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        mr = GetComponent<MeshRenderer>();
+        barrelMR = transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>();
+        defaultMaterial = mr.material;
         firePoint = transform.GetChild(1);
 
         if(gameObject.tag == "TankRed")
@@ -65,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleShooting(KeyCode inputKey)
     {
-        if(Input.GetKeyDown(inputKey))
+        if(!isStunned && Input.GetKeyDown(inputKey))
         {
             // Limits the rate at which projectiles can be fired
             bool canShoot = Time.time > nextShotTime;
@@ -79,6 +93,39 @@ public class PlayerController : MonoBehaviour
                 // Resets projectile delay timer
                 nextShotTime = Time.time + timeBetweenShots;
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(!isStunned && collision.gameObject.tag.Contains("Bullet"))
+        {
+            StartCoroutine(StunEffect());
+        }
+    }
+
+    IEnumerator StunEffect()
+    {
+        isStunned = true;
+        float initMoveSpeed = moveSpeed;
+        moveSpeed = 0;
+        StartCoroutine(StunVisuals());
+        yield return new WaitForSeconds(stunDuration);
+        moveSpeed = initMoveSpeed;
+        yield return new WaitForSeconds(invincibilityDuration);
+        isStunned = false;
+    }
+
+    IEnumerator StunVisuals()
+    {
+        while(isStunned)
+        {
+            mr.material = stunnedMaterial;
+            barrelMR.material = stunnedMaterial;
+            yield return new WaitForSeconds(0.2f);
+            mr.material = defaultMaterial;
+            barrelMR.material = defaultMaterial;
+            yield return new WaitForSeconds(0.2f);
         }
     }
 }
