@@ -1,0 +1,24 @@
+﻿public enum KeybindingActions
+{
+    BlueTankForward,
+    BlueTankBack,
+    BlueTankLeft,
+    BlueTankRight,
+    BlueTankShoot,
+    BlueTankForwardSecondary,
+    BlueTankBackSecondary,
+    BlueTankLeftSecondary,
+    BlueTankRightSecondary,
+    BlueTankShootSecondary,
+    RedTankForward,
+    RedTankBack,
+    RedTankLeft,
+    RedTankRight,
+    RedTankShoot,
+    RedTankForwardSecondary,
+    RedTankBackSecondary,
+    RedTankLeftSecondary,
+    RedTankRightSecondary,
+    RedTankShootSecondary,
+    Pause
+}
