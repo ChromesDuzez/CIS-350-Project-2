@@ -26,7 +26,9 @@ public class GameManager : MonoBehaviour
     //debug variables
     public bool debugGameOver;
     public bool debugPlayer1Win;
-    public int debugScoreboard;
+    public bool debugAddToCurrentScore;
+    public int debugScoreToAdd;
+    public int debugCurrentScore;
     public float debugScoreRatio;
     public float[] debugReferenceRatios;
 
@@ -45,7 +47,7 @@ public class GameManager : MonoBehaviour
 
         //set the currentScore equal to the maxScore / 2 for both the players;
         currentScore = maxScore / 2;
-        debugScoreboard = currentScore;
+        debugCurrentScore = currentScore;
         debugReferenceRatios = new float[numHalves];
         debuggingMethod();
     }
@@ -54,10 +56,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //for the debugging in the inspector
-        currentScore = debugScoreboard;
+        debugCurrentScore = currentScore;
         debugGameOver = gameOver;
         debugPlayer1Win = player1Win;
         debugScoreRatio = (float)currentScore / (float)maxScore;
+        if (debugAddToCurrentScore && !gameOver) 
+        { 
+            playerOneAddPoints(debugScoreToAdd);
+            debugAddToCurrentScore = false;
+        }
 
 
         //logic for scoreboard
