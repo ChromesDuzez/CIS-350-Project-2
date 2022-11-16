@@ -97,4 +97,23 @@ public class GameManager : MonoBehaviour
             debugReferenceRatios[i] = (float)i / (float)numHalves;
         }
     }
+
+    //for increment and de-incrementing points for each player
+    public void playerOneAddPoints(int points)
+    {
+        currentScore += points;
+    }
+
+    public void playerOneSubtractPoints(int points)
+    {
+        currentScore -= points;
+    }
+    public void playerTwoAddPoints(int points)
+    {
+        currentScore -= points;
+    }
+    public void playerTwoSubtractPoints(int points)
+    {
+        currentScore += points;
+    }
 }
