@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Zach Wilson
+* CIS 350 - Group Project
+* This script manages the tug-of-war style scoreboard whilst also managing the gameOver variable and win conditions pertaining to the score
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

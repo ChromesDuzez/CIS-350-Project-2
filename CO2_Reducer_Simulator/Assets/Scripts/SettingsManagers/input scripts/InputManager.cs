@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Zach Wilson
+* CIS 350 - Group Project
+* This script is an Input Manager for a standalone keybindings manager
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,10 @@
-﻿public enum KeybindingActions
+﻿/*
+* Zach Wilson
+* CIS 350 - Group Project
+* This script stores the enum for all the different type of keybindings we want to use
+*/
+
+public enum KeybindingActions
 {
     BlueTankForward,
     BlueTankBack,
