@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public static bool gameOver = false;
     public static bool player1Win = false;
     public static int currentScore;
+    public static int player1kills;
+    public static int player2kills;
 
     [Header("Public Facing Variables:")]
     //non-static public variables
@@ -36,6 +38,10 @@ public class GameManager : MonoBehaviour
     // Start is called once per script
     void Start()
     {
+        //get the global ints initialized
+        player1kills = 0;
+        player2kills = 0;
+
         //get the length of halves array and store it so we dont have to get the Length call each time
         numHalves = halves.Length;
 
