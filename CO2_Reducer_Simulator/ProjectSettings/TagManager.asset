@@ -14,6 +14,9 @@ TagManager:
   - MuteToggle
   - MutedSprite
   - EV
+  - panel1
+  - panel2
+  - panel3
   layers:
   - Default
   - TransparentFX
