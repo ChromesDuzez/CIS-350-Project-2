@@ -6,10 +6,16 @@ public class CarSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject carPrefab;
     [SerializeField] private GameObject evPrefab;
+    public GameObject[] waypoints = new GameObject[25];
     [SerializeField] private float carSpawningProbability;
     [SerializeField] private float spawnInterval = 2f;
     [SerializeField] private int maxVehicles;
     private float elapsedTime;
+
+    private void Start()
+    {
+        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+    }
 
     private void Update()
     {
@@ -29,9 +35,11 @@ public class CarSpawner : MonoBehaviour
 
     private void SpawnCar()
     {
+        int randomInt = Random.Range(0, 25);
+
         if (Random.value < carSpawningProbability)
         {
-            Instantiate(carPrefab, transform);
+            Instantiate(carPrefab, waypoints[randomInt].transform);
         }
         else
         {
