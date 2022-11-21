@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class CarSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject carPrefab;
+    [SerializeField] private GameObject[] carPrefab;
     [SerializeField] private GameObject evPrefab;
     public GameObject[] waypoints = new GameObject[25];
     [SerializeField] private float carSpawningProbability;
     [SerializeField] private float spawnInterval = 2f;
-    [SerializeField] private int maxVehicles;
+    [SerializeField] private int phaseOneMaxVehicles;
+    [SerializeField] private int phaseTwoMaxVehicles;
+    [SerializeField] private int phaseThreeMaxVehicles;
+    [SerializeField] private float timeUntilPhaseTwo;
+    [SerializeField] private float timeUntilPhaseThree;
     private float elapsedTime;
+    private float totalElapsedTime;
+    private int maxVehicles;
 
     private void Start()
     {
@@ -20,6 +26,7 @@ public class CarSpawner : MonoBehaviour
     private void Update()
     {
         elapsedTime += Time.deltaTime;
+        totalElapsedTime += elapsedTime;
 
         if (elapsedTime >= spawnInterval)
         {
@@ -31,6 +38,11 @@ public class CarSpawner : MonoBehaviour
                 SpawnCar();
             }
         }
+
+        if (totalElapsedTime > timeUntilPhaseThree)
+            maxVehicles = phaseThreeMaxVehicles;
+        else if (totalElapsedTime > timeUntilPhaseTwo)
+            maxVehicles = phaseTwoMaxVehicles;
     }
 
     private void SpawnCar()
@@ -39,7 +51,8 @@ public class CarSpawner : MonoBehaviour
 
         if (Random.value < carSpawningProbability)
         {
-            Instantiate(carPrefab, waypoints[randomInt].transform);
+            int randomValue = Random.Range(0, carPrefab.Length);
+            Instantiate(carPrefab[randomValue], waypoints[randomInt].transform);
         }
         else
         {

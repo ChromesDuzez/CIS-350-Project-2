@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2520831080883268318}
   - component: {fileID: 2095210711663727084}
   - component: {fileID: 8718561669891051963}
+  - component: {fileID: 2998894162568581301}
   m_Layer: 0
   m_Name: EV
   m_TagString: EV
@@ -82,6 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae407b77d30e6642adb581607508b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 9044397617210698453, guid: 6edf6b1b1d46f9c4a9878e9441ec039c, type: 3}
 --- !u!54 &8718561669891051963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -98,6 +100,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2998894162568581301
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2521474182209306690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7579826, y: 1.7636888, z: 1.0517967}
+  m_Center: {x: 0.03822708, y: 0.93783206, z: 2.6298072}
 --- !u!1001 &8059902506675173111
 PrefabInstance:
   m_ObjectHideFlags: 0
