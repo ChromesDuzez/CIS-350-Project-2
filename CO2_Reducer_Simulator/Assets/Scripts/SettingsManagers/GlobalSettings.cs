@@ -34,6 +34,7 @@ public class GlobalSettings : MonoBehaviour
 
     //Choose 1 or 2 players
     public static bool player2Enabled = false;
+    public static bool player2AIEnabled = false;
 
 
     //Settings Related to Seeing the Tutorial on the start of the game...

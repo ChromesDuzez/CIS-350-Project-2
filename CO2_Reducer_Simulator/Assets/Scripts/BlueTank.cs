@@ -19,7 +19,7 @@ public class BlueTank : MonoBehaviour
             gameObject.GetComponent<EnemyMobile>().enabled = false;
             gameObject.GetComponent<EnemyController>().enabled = false;
         }
-        else
+        else if(GlobalSettings.player2AIEnabled)
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = true;
             gameObject.GetComponent<EnemyMobile>().enabled = true;
