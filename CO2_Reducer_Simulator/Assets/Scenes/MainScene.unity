@@ -19159,7 +19159,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 15.371223
+  field of view: 40
   orthographic: 0
   orthographic size: 104.3
   m_Depth: -1
@@ -19185,7 +19185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.6685826, y: 0.23021144, z: -0.23021144, w: 0.6685826}
-  m_LocalPosition: {x: 345.09998, y: 199, z: 344.70004}
+  m_LocalPosition: {x: 350.45, y: 248.77052, z: 344.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21799,6 +21799,7 @@ GameObject:
   - component: {fileID: 1074360324}
   - component: {fileID: 1074360323}
   - component: {fileID: 1074360322}
+  - component: {fileID: 1074360326}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -21888,6 +21889,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1074360326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074360321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb14f5f7b3396d48b932372b16c32d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redWin: {fileID: 140112796}
+  blueWin: {fileID: 998913978}
 --- !u!4 &1086130076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9049548974665076485, guid: e57c3cf7f59d66d448a349f63898c942, type: 3}
@@ -26680,7 +26695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400296810}
   m_LocalRotation: {x: 0.6685826, y: 0.23021144, z: -0.23021144, w: 0.6685826}
-  m_LocalPosition: {x: 345.09998, y: 199, z: 344.70004}
+  m_LocalPosition: {x: 350.45, y: 248.77052, z: 344.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1363000545}
@@ -35198,8 +35213,6 @@ MonoBehaviour:
   debugCurrentScore: 0
   debugScoreRatio: 0
   debugReferenceRatios: []
-  redWin: {fileID: 140112796}
-  blueWin: {fileID: 998913978}
 --- !u!4 &1734288057
 Transform:
   m_ObjectHideFlags: 0
