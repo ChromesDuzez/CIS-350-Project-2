@@ -48,12 +48,12 @@ public class PlayerController : MonoBehaviour
         if (tankRed)
         {
             HandleMovement(true);
-            HandleShooting(KeyCode.E);
+            HandleShooting(GlobalSettings.RedTankShoot);
         }
-        else
+        else if(GlobalSettings.player2Enabled)
         {
             HandleMovement(false);
-            HandleShooting(KeyCode.RightShift);
+            HandleShooting(GlobalSettings.BlueTankShoot);
         }
     }
 
@@ -127,5 +127,34 @@ public class PlayerController : MonoBehaviour
             barrelMR.material = defaultMaterial;
             yield return new WaitForSeconds(0.2f);
         }
+    }
+
+    public bool AIshoots()
+    {
+        if (!isStunned)
+        {
+            // Limits the rate at which projectiles can be fired
+            bool canShoot = Time.time > nextShotTime;
+
+            if (canShoot)
+            {
+                GameObject spawnedBullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+                spawnedBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootForce, ForceMode.Impulse);
+                Destroy(spawnedBullet, 5f);
+
+                // Resets projectile delay timer
+                nextShotTime = Time.time + timeBetweenShots;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+
+        return true;
     }
 }

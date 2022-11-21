@@ -24,11 +24,16 @@ public class GlobalSettings : MonoBehaviour
     public static KeyCode RedTankBack;
     public static KeyCode RedTankRotateLeft;
     public static KeyCode RedTankRotateRight;
+    public static KeyCode RedTankShoot = KeyCode.E;
         //Blue Tank Settings
     public static KeyCode BlueTankForward;
     public static KeyCode BlueTankBack;
     public static KeyCode BlueTankRotateLeft;
     public static KeyCode BlueTankRotateRight;
+    public static KeyCode BlueTankShoot = KeyCode.RightShift;
+
+    //Choose 1 or 2 players
+    public static bool player2Enabled = false;
 
 
     //Settings Related to Seeing the Tutorial on the start of the game...
