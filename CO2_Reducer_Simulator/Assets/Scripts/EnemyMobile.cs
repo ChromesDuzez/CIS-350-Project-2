@@ -22,7 +22,7 @@ namespace Unity.FPS.AI
 
         public AIState AiState { get; private set; }
         EnemyController m_EnemyController;
-        AudioSource m_AudioSource;
+//        AudioSource m_AudioSource;
 
         const string k_AnimMoveSpeedParameter = "MoveSpeed";
         const string k_AnimAttackParameter = "Attack";
@@ -45,8 +45,8 @@ namespace Unity.FPS.AI
             AiState = AIState.Patrol;
 
             // adding a audio source to play the movement sound on it
-            m_AudioSource = GetComponent<AudioSource>();
-            DebugUtility.HandleErrorIfNullGetComponent<AudioSource, EnemyMobile>(m_AudioSource, this, gameObject);
+//            m_AudioSource = GetComponent<AudioSource>();
+//            DebugUtility.HandleErrorIfNullGetComponent<AudioSource, EnemyMobile>(m_AudioSource, this, gameObject);
         }
 
         void Update()
