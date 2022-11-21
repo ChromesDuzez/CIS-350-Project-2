@@ -318,7 +318,15 @@ namespace Unity.FPS.AI
 
 
             //transform.Rotate(Vector3.up * rotateInput);
-            transform.Rotate(lookPosition);
+            //transform.Rotate(lookPosition);
+
+            Vector3 lookDirection = Vector3.ProjectOnPlane(lookPosition - transform.position, Vector3.up).normalized;
+            if (lookDirection.sqrMagnitude != 0f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+                transform.rotation =
+                    Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * OrientationSpeed);
+            }
         }
 
         public bool TryAtack(Vector3 enemyPosition)
