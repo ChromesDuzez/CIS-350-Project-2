@@ -6,6 +6,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,10 +35,18 @@ public class GameManager : MonoBehaviour
     public float debugScoreRatio;
     public float[] debugReferenceRatios;
 
+    //UI stuff
+    public GameObject redWin;
+    public GameObject blueWin;
+
 
     // Start is called once per script
     void Start()
     {
+        Time.timeScale = 1;
+        redWin.SetActive(false);
+        blueWin.SetActive(false);
+
         //get the global ints initialized
         player1kills = 0;
         player2kills = 0;
@@ -104,6 +113,30 @@ public class GameManager : MonoBehaviour
                         halves[i].GetComponent<Image>().enabled = true;
                     }
                 }
+            }
+        }
+
+        if(gameOver && !player1Win)
+        {
+            Time.timeScale = 0;
+            blueWin.SetActive(true);
+
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+
+        if (gameOver && player1Win)
+        {
+            Time.timeScale = 0;
+            redWin.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Debug.Log("PreLoad");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Debug.Log("SceneLoad");
             }
         }
     }

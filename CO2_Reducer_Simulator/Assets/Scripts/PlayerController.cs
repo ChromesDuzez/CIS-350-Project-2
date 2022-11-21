@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float turnSpeed = 10f;
 
     [Header("Shooting:")]
-    public float shootForce = 10f;
+    public float shootForce = 20f;
     public float timeBetweenShots = 0.5f;
     private float nextShotTime;
 
