@@ -9,7 +9,7 @@ public class WinScreenController : MonoBehaviour
     public GameObject blueWin;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         redWin.SetActive(false);
         blueWin.SetActive(false);

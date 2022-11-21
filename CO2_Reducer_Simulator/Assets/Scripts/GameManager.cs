@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
     // Start is called once per script
     void Start()
     {
+        //start of game
+        gameOver = false;
+        player1Win = false;
+
         //get the global ints initialized
         player1kills = 0;
         player2kills = 0;
@@ -113,6 +117,8 @@ public class GameManager : MonoBehaviour
         if (gameOver && Input.GetKeyDown(KeyCode.R))
         {
             Time.timeScale = 1f;
+
+            //Start();
 
             Debug.Log("PreLoad");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
