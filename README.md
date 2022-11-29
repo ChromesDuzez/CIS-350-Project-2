@@ -6,7 +6,7 @@ CO2 Reducer Simulator Made by John Green, Zach Wilson, Lucas Johnson, Colin Gama
 Control your electric tesla tank and go up against an AI or a Friend, to see who can destroy the most gas-guzzling hummers that drive on your city's streets. This tug-of-war style minigame offers fun competitive play for you and your friends to enjoy as you clean up the atmosphere.
 
 ## Installing from the GitHub Release
-Choose the Release of your choosing then download the standalone build zip file for that release. They generally follow the naming scheme of "CO2_Reducer_Simulator-[State]-V#-#.zip". Then unzip the game folder from the zip file, and place the contents of the game in a directory of your choosing.
+Choose the Release of your choosing then download the standalone build zip file for that release. They generally follow the naming scheme of "Eco-Tanks-[State]-V#-#.zip". Then unzip the game folder from the zip file, and place the contents of the game in a directory of your choosing.
 You can send a shortcut for the CO2_Reducer_Simulator.exe to the desktop should you wish.
 All you need to do is click on the exe to launch and bob's your uncle.
 
@@ -14,7 +14,7 @@ All you need to do is click on the exe to launch and bob's your uncle.
 To get the latest version of the game, you can download/play from one of the following source(s)
 
 - [GitHub Releases](https://github.com/PlatFormPlayZ/CIS-350-Project-2/releases)
-- [Simmer.io](https://simmer.io/@Ronis/co2-reducer-simulator)
+- [Simmer.io](https://simmer.io/@Ronis/eco-tanks)
 - [Play the Dev Branch](https://github.com/PlatFormPlayZ/CIS-350-Project-2/blob/main/README.md#playing-the-dev-branch)
 
 ## Feedback
