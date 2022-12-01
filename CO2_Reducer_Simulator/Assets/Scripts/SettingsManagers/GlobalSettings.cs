@@ -64,44 +64,44 @@ public class GlobalSettings : MonoBehaviour
     {
         if(Vertical1 == axis)
         {
-            if(Input.GetKeyDown(RedTankForward))
+            if(Input.GetKey(RedTankForward))
             {
                 return 1;
             }
-            else if(Input.GetKeyDown(RedTankBack))
+            else if(Input.GetKey(RedTankBack))
             {
                 return -1;
             }
         }
         else if(Horizontal1 == axis)
         {
-            if (Input.GetKeyDown(RedTankRotateLeft))
+            if (Input.GetKey(RedTankRotateRight))
             {
                 return 1;
             }
-            else if (Input.GetKeyDown(RedTankRotateRight))
+            else if (Input.GetKey(RedTankRotateLeft))
             {
                 return -1;
             }
         }
         else if (Vertical2 == axis)
         {
-            if (Input.GetKeyDown(BlueTankForward))
+            if (Input.GetKey(BlueTankForward))
             {
                 return 1;
             }
-            else if (Input.GetKeyDown(BlueTankBack))
+            else if (Input.GetKey(BlueTankBack))
             {
                 return -1;
             }
         }
         else if (Horizontal2 == axis)
         {
-            if (Input.GetKeyDown(BlueTankRotateLeft))
+            if (Input.GetKey(BlueTankRotateRight))
             {
                 return 1;
             }
-            else if (Input.GetKeyDown(BlueTankRotateRight))
+            else if (Input.GetKey(BlueTankRotateLeft))
             {
                 return -1;
             }

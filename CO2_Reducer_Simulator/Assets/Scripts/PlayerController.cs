@@ -64,13 +64,13 @@ public class PlayerController : MonoBehaviour
 
         if (player1)
         {
-            rotateInput = Input.GetAxisRaw("Horizontal") * turnSpeed * Time.deltaTime;
-            moveInput = Input.GetAxisRaw("Vertical") * moveSpeed; //* Time.deltaTime;
+            rotateInput = GlobalSettings.GetAxisRaw("Horizontal") * turnSpeed * Time.deltaTime;
+            moveInput = GlobalSettings.GetAxisRaw("Vertical") * moveSpeed; //* Time.deltaTime;
         }
         else
         {
-            rotateInput = Input.GetAxisRaw("Horizontal2") * turnSpeed * Time.deltaTime;
-            moveInput = Input.GetAxisRaw("Vertical2") * moveSpeed; //* Time.deltaTime;
+            rotateInput = GlobalSettings.GetAxisRaw("Horizontal2") * turnSpeed * Time.deltaTime;
+            moveInput = GlobalSettings.GetAxisRaw("Vertical2") * moveSpeed; //* Time.deltaTime;
         }
 
         rb.velocity = transform.forward * moveInput;
