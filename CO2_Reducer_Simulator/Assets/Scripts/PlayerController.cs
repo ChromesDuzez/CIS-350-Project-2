@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public float stunDuration = 3f;
     public float invincibilityDuration = 1f;
     private Material defaultMaterial;
-    private bool isStunned = false;
+    [HideInInspector] public bool isStunned = false;
 
     void Start()
     {
@@ -96,9 +96,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(!isStunned && collision.gameObject.tag.Contains("Bullet"))
+        if (!isStunned && other.gameObject.tag.Contains("Bullet"))
         {
             StartCoroutine(StunEffect());
         }

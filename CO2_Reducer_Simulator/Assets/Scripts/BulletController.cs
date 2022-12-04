@@ -11,7 +11,7 @@ public class BulletController : MonoBehaviour
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.transform.CompareTag("Car") || other.transform.CompareTag("EV"))
         {

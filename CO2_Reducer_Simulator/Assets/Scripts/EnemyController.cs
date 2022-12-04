@@ -125,6 +125,20 @@ namespace Unity.FPS.AI
 
         void Update()
         {
+            if(player2Controller.isStunned)
+            {
+                if (NavMeshAgent.speed != 0)
+                {
+                    GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                    NavMeshAgent.speed = 0;
+                }
+            }
+            else
+            {
+                NavMeshAgent.speed = 30f;
+            }
+
             EnsureIsWithinLevelBounds();
 
             DetectionModule.HandleTargetDetection(m_Actor, m_SelfColliders);
