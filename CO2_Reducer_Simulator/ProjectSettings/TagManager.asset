@@ -18,6 +18,7 @@ TagManager:
   - panel2
   - panel3
   - GameManager
+  - InfoScreen
   layers:
   - Default
   - TransparentFX

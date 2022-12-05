@@ -44,6 +44,7 @@ public class GlobalSettings : MonoBehaviour
 
 
     //Settings Related to Seeing the Tutorial on the start of the game...
+    public static bool hasSeenInfoCard = false;
     public static bool hasSeenTutorial = false;
     public static string tutorialScene;
 
