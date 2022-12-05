@@ -29,9 +29,9 @@ public class BlueTankControlsScreen : MonoBehaviour
     //manages setting up the control strings properly corrisponding to GlobalSettings
     void getControls()
     {
-        rotate = GlobalSettings.BlueTankRotateLeft + "/" + GlobalSettings.BlueTankRotateRight;
-        move = GlobalSettings.BlueTankForward + "/" + GlobalSettings.BlueTankBack;
-        shoot = GlobalSettings.BlueTankShoot + "";
+        rotate = GlobalSettings.BlueTankRotateLeft.Binding + "/" + GlobalSettings.BlueTankRotateRight.Binding;
+        move = GlobalSettings.BlueTankForward.Binding + "/" + GlobalSettings.BlueTankBack.Binding;
+        shoot = GlobalSettings.BlueTankShoot.Binding + "";
     }
 
     //combines the controls strings into a singular string for better readability.

@@ -29,9 +29,9 @@ public class RedTankControlsScreen : MonoBehaviour
     //manages setting up the control strings properly corrisponding to GlobalSettings
     void getControls()
     {
-        rotate = GlobalSettings.RedTankRotateLeft + "/" + GlobalSettings.RedTankRotateRight;
-        move = GlobalSettings.RedTankForward + "/" + GlobalSettings.RedTankBack;
-        shoot = GlobalSettings.RedTankShoot + "";
+        rotate = GlobalSettings.RedTankRotateLeft.Binding + "/" + GlobalSettings.RedTankRotateRight.Binding;
+        move = GlobalSettings.RedTankForward.Binding + "/" + GlobalSettings.RedTankBack.Binding;
+        shoot = GlobalSettings.RedTankShoot.Binding + "";
     }
 
     //combines the controls strings into a singular string for better readability.

@@ -48,12 +48,12 @@ public class PlayerController : MonoBehaviour
         if (tankRed)
         {
             HandleMovement(true);
-            HandleShooting(GlobalSettings.RedTankShoot);
+            HandleShooting(GlobalSettings.RedTankShoot.Binding);
         }
         else if(GlobalSettings.player2Enabled)
         {
             HandleMovement(false);
-            HandleShooting(GlobalSettings.BlueTankShoot);
+            HandleShooting(GlobalSettings.BlueTankShoot.Binding);
         }
     }
 
