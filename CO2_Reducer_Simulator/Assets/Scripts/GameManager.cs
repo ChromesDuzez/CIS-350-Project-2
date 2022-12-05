@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public Image[] halves;
     private int numHalves;
     public int maxScore;
+    public Text blueKills;
+    public Text redKills;
 
     [Header("Debugging Variables:")]
     //debug variables
@@ -77,6 +79,10 @@ public class GameManager : MonoBehaviour
             debugAddToCurrentScore = false;
         }
 
+
+        // UI Elements
+        redKills.text = player1kills + "";
+        blueKills.text = player2kills + "";
 
         //logic for scoreboard
         if (!gameOver)
