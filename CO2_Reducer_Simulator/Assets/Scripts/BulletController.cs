@@ -22,14 +22,20 @@ public class BulletController : MonoBehaviour
             if(gameObject.tag.Equals("BulletRed"))
             {
                 if (other.transform.CompareTag("Car"))
+                {
                     gm.playerOneAddPoints(1);
+                    GameManager.player1kills++;
+                }
                 else
                     gm.playerOneSubtractPoints(2);
             }
             if (gameObject.tag.Equals("BulletBlue"))
             {
                 if (other.transform.CompareTag("Car"))
+                {
                     gm.playerTwoAddPoints(1);
+                    GameManager.player2kills++;
+                }
                 else
                     gm.playerTwoSubtractPoints(2);
             }
