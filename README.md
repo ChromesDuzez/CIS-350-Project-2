@@ -1,13 +1,13 @@
 # CIS-350 Project 2
 
 ## About
-CO2 Reducer Simulator Made by John Green, Zach Wilson, Lucas Johnson, Colin Gamagami, Devun Schneider
+Eco Tanks! Made by John Green, Zach Wilson, Lucas Johnson, Colin Gamagami, Devun Schneider
 
 Control your electric tesla tank and go up against an AI or a Friend, to see who can destroy the most gas-guzzling hummers that drive on your city's streets. This tug-of-war style minigame offers fun competitive play for you and your friends to enjoy as you clean up the atmosphere.
 
 ## Installing from the GitHub Release
-Choose the Release of your choosing then download the standalone build zip file for that release. They generally follow the naming scheme of `Eco-Tanks-[State]-V#-#.zip`. Then unzip the game folder from the zip file, and place the contents of the game in a directory of your choosing.
-You can send a shortcut for the CO2_Reducer_Simulator.exe to the desktop should you wish.
+Choose the Release of your choosing then download the standalone build zip file for that release. They generally follow the naming scheme of `Eco_Tanks!-[State]-V#-#.zip`. Then unzip the game folder from the zip file, and place the contents of the game in a directory of your choosing.
+You can send a shortcut for the `Eco Tanks!.exe` to the desktop should you wish.
 All you need to do is click on the exe to launch and bob's your uncle.
 
 ## Playing the Game
@@ -45,10 +45,10 @@ Then Once you have the Repository cloned, you need to open it in Unity...
 Now that we have the repo cloned, unity installed, all that is left is to open the project in unity...
 - Under the Projects tab in Unity Hub click `open`
 - Navigate to the folder which we cloned our repo to. By Default it is `%UserProfile%/Documents/GitHub/CIS-350-Project-2`
-- Select CO2_Reducer_Simulator folder in the repo then click `open`
+- Select `Eco_Tanks!` folder in the repo then click `open`
 - Once the project has opened, you can play in the development environment. Do so by going to scenes > MainMenu then Play at the top.
 
 If you have an error wher Unity is failing to load the project due to the layout see [this article](https://answers.unity.com/questions/1712501/stuck-in-failed-to-load-window-layout-loop.html).
 To summarize try:
 - Go to `%UserProfile%/AppData/Roaming/Unity/Editor-5.x/Preferences/Layouts` and delete `LastLayout.dwlt`
-- Then go to the cloned Repo folder then  `./CO2_Reducer_Simulator/Library/` and delete `CurrentLayout-default.dwlt`
+- Then go to the cloned Repo folder then  `./Eco_Tanks!/Library/` and delete `CurrentLayout-default.dwlt`
