@@ -50,7 +50,8 @@ public class GlobalSettings : MonoBehaviour
     public static List<KeyRef> allKeybindings = new List<KeyRef>() { RedTankForward, RedTankBack, RedTankRotateLeft, RedTankRotateRight, RedTankShoot, BlueTankForward, BlueTankBack, BlueTankRotateLeft, BlueTankRotateRight, BlueTankShoot };
     public static List<string> listKeybindings = new List<string>() { RedTankForward.BindingName, RedTankBack.BindingName, RedTankRotateLeft.BindingName, RedTankRotateRight.BindingName, RedTankShoot.BindingName, BlueTankForward.BindingName, BlueTankBack.BindingName, BlueTankRotateLeft.BindingName, BlueTankRotateRight.BindingName, BlueTankShoot.BindingName };
     //KeyCode[] allKeybindings = new KeyCode[] { };
-    private static List<KeyRef> defaultKeybindings = allKeybindings;
+    [SerializeField]
+    private KeyCode[] defaultKeybindings = new KeyCode[10];
 
     //Choose 1 or 2 players
     public static bool player2Enabled = false;
@@ -65,14 +66,21 @@ public class GlobalSettings : MonoBehaviour
     //Setup
     void Start()
     {
-        allKeybindings.Add(RedTankForward);
-        allKeybindings.Add(RedTankBack);
-        allKeybindings.Add(RedTankRotateLeft);
-        allKeybindings.Add(RedTankRotateRight);
-        allKeybindings.Add(BlueTankForward);
-        allKeybindings.Add(BlueTankBack);
-        allKeybindings.Add(BlueTankRotateLeft);
-        allKeybindings.Add(BlueTankRotateRight);
+        //allKeybindings.Add(RedTankForward);
+        //allKeybindings.Add(RedTankBack);
+        //allKeybindings.Add(RedTankRotateLeft);
+        //allKeybindings.Add(RedTankRotateRight);
+        //allKeybindings.Add(BlueTankForward);
+        //allKeybindings.Add(BlueTankBack);
+        //allKeybindings.Add(BlueTankRotateLeft);
+        //allKeybindings.Add(BlueTankRotateRight);
+
+        KeyCode temp;
+        for (int i = 0; i < allKeybindings.Count; i++)
+        {
+            temp = allKeybindings[i].Binding;
+            defaultKeybindings[i] = temp;
+        }
     }
 
     public static float GetAxisRaw(string axis)
@@ -81,7 +89,7 @@ public class GlobalSettings : MonoBehaviour
         {
             if(keybinding.Category == axis)
             {
-                if (Input.GetKey(keybinding.Binding))
+                if (Input.GetKey( keybinding.Binding))
                 {
                     return keybinding.Value;
                 }
@@ -89,6 +97,15 @@ public class GlobalSettings : MonoBehaviour
         }
         return Input.GetAxisRaw(axis);
     }
+
+    public void ResetToDefaultControls()
+    {
+        for(int i = 0; i < allKeybindings.Count; i++)
+        {
+            allKeybindings[i].Binding = defaultKeybindings[i];
+        }
+    }
+
 }
 
 public class KeyRef

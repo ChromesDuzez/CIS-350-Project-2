@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 949746}
   - component: {fileID: 949745}
   - component: {fileID: 949744}
+  - component: {fileID: 949747}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -205,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 987776806}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 949747}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -255,6 +256,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949742}
   m_CullTransparentMesh: 0
+--- !u!114 &949747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcade8bcabb30df48bf60bccdb38bd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1388839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29646,7 +29659,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 15.371223
+  field of view: 15.374688
   orthographic: 0
   orthographic size: 104.3
   m_Depth: -1
@@ -29672,7 +29685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.6685826, y: 0.23021144, z: -0.23021144, w: 0.6685826}
-  m_LocalPosition: {x: 345.09998, y: 199, z: 344.7}
+  m_LocalPosition: {x: 345.09998, y: 199, z: 344.70004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37793,7 +37806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400296810}
   m_LocalRotation: {x: 0.6685826, y: 0.23021144, z: -0.23021144, w: 0.6685826}
-  m_LocalPosition: {x: 345.09998, y: 199, z: 344.7}
+  m_LocalPosition: {x: 345.09998, y: 199, z: 344.70004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1363000545}
