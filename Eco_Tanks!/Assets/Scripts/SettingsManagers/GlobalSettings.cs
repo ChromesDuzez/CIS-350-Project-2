@@ -115,6 +115,18 @@ public class KeyRef
     public string Category { get; set; }
     public float Value { get; set; }
 
+    public override string ToString()
+    {
+        //←/→/↓/↑
+        if (Binding == KeyCode.LeftArrow) { return "←"; }
+        if (Binding == KeyCode.RightArrow) { return "→"; }
+        if (Binding == KeyCode.UpArrow) { return "↑"; }
+        if (Binding == KeyCode.DownArrow) { return "↓"; }
+
+        //return all other keybindings as is
+        return Binding + "";
+    }
+
     public KeyRef(string bindingName, KeyCode binding, string category = "", float value = 0)
     {
         BindingName = bindingName;
