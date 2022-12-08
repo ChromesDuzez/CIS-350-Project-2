@@ -221,6 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874ad6823ec038f46b9898383cc4a192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  justRotate: 0
+  justMove: 0
+  justShoot: 0
 --- !u!1 &13722595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,17 +1774,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 1012018679}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: BlueTankRotateRight
 --- !u!114 &211935694
 MonoBehaviour:
@@ -2185,6 +2177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f7fda06ea6db84ab94e793c6f16989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  justRotate: 0
+  justMove: 0
+  justShoot: 0
 --- !u!1 &335648131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,17 +3081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 933377860}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: BlueTankShoot
 --- !u!114 &407686571
 MonoBehaviour:
@@ -3742,17 +3726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 629039669}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: RedTankBack
 --- !u!114 &532839335
 MonoBehaviour:
@@ -3890,17 +3863,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 1241919513}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: RedTankForward
 --- !u!114 &533432850
 MonoBehaviour:
@@ -5406,17 +5368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 957287465}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: RedTankRotateRight
 --- !u!114 &680506738
 MonoBehaviour:
@@ -6564,7 +6515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f35787f3d1eb342b024e957cccdd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultKeybindings: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &883028775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7266,17 +7216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 2128529117}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: BlueTankForward
 --- !u!114 &960293200
 MonoBehaviour:
@@ -8604,7 +8543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1500981976}
+      - m_Target: {fileID: 2048609711}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -8614,7 +8553,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1045832369}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -8650,7 +8589,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 886219283}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -9988,17 +9927,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 1715286898}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: BlueTankRotateLeft
 --- !u!114 &1312793488
 MonoBehaviour:
@@ -11849,17 +11777,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 144412771}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: BlueTankBack
 --- !u!114 &1599656231
 MonoBehaviour:
@@ -12296,17 +12213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 1977822725}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: RedTankShoot
 --- !u!114 &1657482959
 MonoBehaviour:
@@ -13665,17 +13571,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   bindingText: {fileID: 1262566804}
-  theKeybindings:
-  - RedTankForward
-  - RedTankBack
-  - RedTankRotateLeft
-  - RedTankRotateRight
-  - RedTankShoot
-  - BlueTankForward
-  - BlueTankBack
-  - BlueTankRotateLeft
-  - BlueTankRotateRight
-  - BlueTankShoot
   bindingToEdit: RedTankRotateLeft
 --- !u!114 &1885389297
 MonoBehaviour:

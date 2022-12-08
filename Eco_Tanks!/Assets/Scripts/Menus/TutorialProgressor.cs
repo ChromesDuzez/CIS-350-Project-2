@@ -2,6 +2,9 @@
 * John Green
 * CIS 350 - Group Project
 * A HORRIBLY inefficient way to cycle tutorial panels because I am suboptimal at coding
+* 
+* Edit: Zach Wilson - Made it so that it uses the custom keybindings and also helped make it a tad more efficient w/o spending a bunch more time
+* Also as per Professor Schaffer's Note made it so that the Second Player (if not an AI also gets to learn the controls)
 */
 
 using System.Collections;
@@ -12,9 +15,11 @@ public class TutorialProgressor : MonoBehaviour
     public GameObject[] tutorialPanels = new GameObject[3];
     public int buttonsPressed = 0;
     public bool button1Pressed = false;
-    public bool button2Pressed;
+    public bool button2Pressed = false;
+    public bool button3Pressed = false;
+    public bool button4Pressed = false;
     public bool canSwitch = false;
-    public int routineAllower = 1;
+    public bool routineAllower = true;
 
     void Start()
     {
@@ -25,95 +30,116 @@ public class TutorialProgressor : MonoBehaviour
     {
         if(tutorialPanels[0].activeInHierarchy)
         {
-            if (Input.GetKeyDown(KeyCode.A) && button1Pressed == false)
+            if (Input.GetKeyDown(GlobalSettings.RedTankRotateLeft.Binding) && button1Pressed == false)
             {
-                buttonsPressed++;
                 button1Pressed = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.D) && button2Pressed == false)
+            if (Input.GetKeyDown(GlobalSettings.RedTankRotateRight.Binding) && button2Pressed == false)
             {
-                buttonsPressed++;
                 button2Pressed = true;
             }
 
-            if(buttonsPressed == 2)
+            if ((Input.GetKeyDown(GlobalSettings.BlueTankRotateLeft.Binding) || GlobalSettings.player2AIEnabled) && button3Pressed == false)
+            {
+                button3Pressed = true;
+            }
+
+            if ((Input.GetKeyDown(GlobalSettings.BlueTankRotateRight.Binding) || GlobalSettings.player2AIEnabled) && button4Pressed == false)
+            {
+                button4Pressed = true;
+            }
+
+            if (button1Pressed && button2Pressed && button3Pressed && button4Pressed)
             {   
-                if(routineAllower == 1)
+                if(routineAllower)
                     StartCoroutine("WaitBeforeNewPanel");
 
                 if (canSwitch)
                 {
-                    buttonsPressed = 0;
                     button1Pressed = false;
                     button2Pressed = false;
+                    button3Pressed = false;
+                    button4Pressed = false;
 
                     tutorialPanels[0].SetActive(false);
                     tutorialPanels[1].SetActive(true);
                     canSwitch = false;
  //                   Debug.Log("False, line 46");
-                    routineAllower = 1;
+                    routineAllower = true;
                 }              
             }
         }
 
         if (tutorialPanels[1].activeInHierarchy)
         {
-            if (Input.GetKeyDown(KeyCode.W) && button1Pressed == false)
+            if (Input.GetKeyDown(GlobalSettings.RedTankForward.Binding) && button1Pressed == false)
             {
-                buttonsPressed++;
                 button1Pressed = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.S) && button2Pressed == false)
+            if (Input.GetKeyDown(GlobalSettings.RedTankBack.Binding) && button2Pressed == false)
             {
-                buttonsPressed++;
                 button2Pressed = true;
             }
 
-            if (buttonsPressed == 2)
+            if ((Input.GetKeyDown(GlobalSettings.BlueTankForward.Binding) || GlobalSettings.player2AIEnabled) && button3Pressed == false)
             {
-                if (routineAllower == 1)
+                button3Pressed = true;
+            }
+
+            if ((Input.GetKeyDown(GlobalSettings.BlueTankBack.Binding) || GlobalSettings.player2AIEnabled) && button4Pressed == false)
+            {
+                button4Pressed = true;
+            }
+
+            if (button1Pressed && button2Pressed && button3Pressed && button4Pressed)
+            {
+                if (routineAllower)
                     StartCoroutine("WaitBeforeNewPanel");
 
                 if (canSwitch)
                 {
-                    buttonsPressed = 0;
                     button1Pressed = false;
                     button2Pressed = false;
+                    button3Pressed = false;
+                    button4Pressed = false;
 
                     tutorialPanels[1].SetActive(false);
                     tutorialPanels[2].SetActive(true);
                     canSwitch = false;
  //                   Debug.Log("False, line 76");
-                    routineAllower = 1;
+                    routineAllower = true;
                 }
             }
         }
 
         if (tutorialPanels[2].activeInHierarchy)
         {
-            if (Input.GetKeyDown(KeyCode.E) && button1Pressed == false)
+            if (Input.GetKeyDown(GlobalSettings.RedTankShoot.Binding) && button1Pressed == false)
             {
-                buttonsPressed++;
                 button1Pressed = true;
             }
 
-            if (buttonsPressed == 1)
+            if ((Input.GetKeyDown(GlobalSettings.BlueTankShoot.Binding) || GlobalSettings.player2AIEnabled) && button3Pressed == false)
             {
-                if (routineAllower == 1)
+                button3Pressed = true;
+            }
+
+            if (button1Pressed && button3Pressed)
+            {
+                if (routineAllower)
                     StartCoroutine("WaitBeforeNewPanel");
 
                 if (canSwitch)
                 {
-                    buttonsPressed = 0;
                     button1Pressed = false;
-                    button2Pressed = false;
+                    button3Pressed = false;
 
                     tutorialPanels[2].SetActive(false);
                     canSwitch = false;
 //                    Debug.Log("False, line 100");
-                    routineAllower = 1;
+                    routineAllower = true;
                 }
             }
         }
@@ -121,33 +147,8 @@ public class TutorialProgressor : MonoBehaviour
 
     private IEnumerator WaitBeforeNewPanel()
     {
-        routineAllower = 0;
+        routineAllower = false;
         yield return new WaitForSeconds(1);
         canSwitch = true;
-//        Debug.Log("True, line 108");
-    //    buttonsPressed = 0;
-    //    button1Pressed = false;
-    //    button2Pressed = false;
-         
-    //    if (tutorialPanels[0].activeInHierarchy)
-    //    {
-    //        tutorialPanels[0].SetActive(false);
-    //        tutorialPanels[1].SetActive(true);
-    //        yield break;
-    //    }
-
-    //    if (tutorialPanels[1].activeInHierarchy)
-    //    {
-    //        tutorialPanels[1].SetActive(false);
-    //        tutorialPanels[2].SetActive(true);
-    //        yield break;
-    //    }
-
-    //    if (tutorialPanels[2].activeInHierarchy)
-    //    {
-    //        tutorialPanels[2].SetActive(false);
-    //        yield break;
-    //    }
     }
-
 }

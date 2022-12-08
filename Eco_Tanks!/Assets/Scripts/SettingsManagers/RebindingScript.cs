@@ -13,39 +13,15 @@ public class RebindingScript : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private Text bindingText;
-    [SerializeField] private List<string> theKeybindings = GlobalSettings.listKeybindings;
     [SerializeField] private string bindingToEdit;
     private int bindingIndex = -1;
     private bool thisScriptRebindingProcess = false;
 
-    /*
-    // Start is called before the first frame update
-    void Start()
-    {
-        for (int i = 0; i < GlobalSettings.listKeybindings.Count; i++)
-        {
-            if(GlobalSettings.listKeybindings[i] == bindingToEdit)
-            {
-                bindingIndex = i;
-            }
-        }
-
-        if(bindingIndex == -1)
-        {
-            Debug.LogError("[RebindingScript.cs] - invalid bindingToEdit given");
-        }
-
-        button = GetComponent<Button>();
-        button.onClick.AddListener(Clicked);
-        bindingText.text = GlobalSettings.allKeybindings[bindingIndex].Binding + "";
-    }
-    */
-
     void OnEnable()
     {
-        for (int i = 0; i < GlobalSettings.listKeybindings.Count; i++)
+        for (int i = 0; i < GlobalSettings.allKeybindings.Count; i++)
         {
-            if (GlobalSettings.listKeybindings[i] == bindingToEdit)
+            if (GlobalSettings.allKeybindings[i].BindingName == bindingToEdit)
             {
                 bindingIndex = i;
             }

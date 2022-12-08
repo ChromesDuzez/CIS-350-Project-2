@@ -2,6 +2,8 @@
 * Zach Wilson
 * CIS 350 - Group Project
 * This script manages the controls listings on the HowToPlay Screen for the Red Tank
+* 
+* Edit: Also added functionaility so that it could update John's in-game tutorial
 */
 
 using System.Collections;
@@ -11,6 +13,11 @@ using UnityEngine.UI;
 
 public class RedTankControlsScreen : MonoBehaviour
 {
+    //this is for use where we want to see just one of the strings
+    [SerializeField] private bool justRotate;
+    [SerializeField] private bool justMove;
+    [SerializeField] private bool justShoot;
+
     private const string header = "Red Tank:";
     private string rotate = "A/D";
     private string move = "W/S";
@@ -22,16 +29,31 @@ public class RedTankControlsScreen : MonoBehaviour
     {
         textBox = GetComponent<Text>();
         getControls();
-        combine();
-        textBox.text = combined;
+        if (!(justRotate || justMove || justShoot))
+        {
+            combine();
+            textBox.text = combined;
+        }
+        else if(justRotate)
+        {
+            textBox.text = rotate;
+        }
+        else if (justMove)
+        {
+            textBox.text = move;
+        }
+        else
+        {
+            textBox.text = shoot;
+        }
     }
 
     //manages setting up the control strings properly corrisponding to GlobalSettings
     void getControls()
     {
-        rotate = GlobalSettings.RedTankRotateLeft.Binding + "/" + GlobalSettings.RedTankRotateRight.Binding;
-        move = GlobalSettings.RedTankForward.Binding + "/" + GlobalSettings.RedTankBack.Binding;
-        shoot = GlobalSettings.RedTankShoot.Binding + "";
+        rotate = GlobalSettings.RedTankRotateLeft.ToString() + "/" + GlobalSettings.RedTankRotateRight.ToString();
+        move = GlobalSettings.RedTankForward.ToString() + "/" + GlobalSettings.RedTankBack.ToString();
+        shoot = GlobalSettings.RedTankShoot.ToString() + "";
     }
 
     //combines the controls strings into a singular string for better readability.
