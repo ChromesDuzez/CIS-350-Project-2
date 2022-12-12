@@ -6,6 +6,8 @@ public class CarSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] carPrefab;
     [SerializeField] private GameObject evPrefab;
+    [SerializeField] private GameObject speedup;
+    [SerializeField] private GameObject fireup;
     public GameObject[] waypoints = new GameObject[25];
     [SerializeField] private float carSpawningProbability;
     [SerializeField] private float spawnInterval = 2f;
@@ -21,6 +23,7 @@ public class CarSpawner : MonoBehaviour
     private void Start()
     {
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        StartCoroutine("PowerupSpawn");
     }
 
     private void Update()
@@ -58,6 +61,24 @@ public class CarSpawner : MonoBehaviour
         {
             Instantiate(evPrefab, transform);
         }
-        
+
+    }
+
+    public IEnumerator PowerupSpawn()
+    {
+        int waypointInd = Random.Range(0, 25);
+        int powerUp = Random.Range(0, 2);
+
+        if(powerUp == 0)
+        {
+            Instantiate(fireup, waypoints[waypointInd].transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(speedup, waypoints[waypointInd].transform.position, Quaternion.identity);
+        }
+
+        yield return new WaitForSeconds(5);
+        StartCoroutine("PowerupSpawn");
     }
 }

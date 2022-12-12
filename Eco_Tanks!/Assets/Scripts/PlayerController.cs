@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement:")]
     public float moveSpeed = 10f;
     public float turnSpeed = 10f;
+    public bool isPoweredUp = false;
 
     [Header("Shooting:")]
     public float shootForce = 20f;
@@ -123,7 +124,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator StunVisuals()
     {
-        while(isStunned)
+        while (isStunned)
         {
             mr.material = stunnedMaterial;
             barrelMR.material = stunnedMaterial;
@@ -161,5 +162,28 @@ public class PlayerController : MonoBehaviour
         }
 
         return true;
+    }
+
+    public IEnumerator FireBoost()
+    {
+        timeBetweenShots = 0.25f;
+        yield return new WaitForSeconds(10);
+        timeBetweenShots = 0.5f;
+    }
+
+    public IEnumerator SpeedBoost()
+    {
+        if(isPoweredUp == false)
+        {
+            isPoweredUp = true;
+            moveSpeed *= 2;
+            turnSpeed *= 2;
+            yield return new WaitForSeconds(10);
+            moveSpeed /= 2;
+            turnSpeed /= 2;
+            isPoweredUp = false;
+        }
+        
+        
     }
 }
