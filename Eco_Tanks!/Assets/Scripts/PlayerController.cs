@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         defaultMaterial = mr.material;
         firePoint = transform.GetChild(1);
 
-        if(gameObject.tag == "TankRed")
+        if (gameObject.tag == "TankRed")
         {
             tankRed = true;
         }
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
             HandleMovement(true);
             HandleShooting(GlobalSettings.RedTankShoot.Binding);
         }
-        else if(GlobalSettings.player2Enabled)
+        else if (GlobalSettings.player2Enabled)
         {
             HandleMovement(false);
             HandleShooting(GlobalSettings.BlueTankShoot.Binding);
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleShooting(KeyCode inputKey)
     {
-        if(!isStunned && Input.GetKeyDown(inputKey))
+        if (!isStunned && Input.GetKeyDown(inputKey))
         {
             // Limits the rate at which projectiles can be fired
             bool canShoot = Time.time > nextShotTime;
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isStunned && other.gameObject.tag.Contains("Bullet"))
+        if (!isStunned && (other.gameObject.tag.Contains("Bullet") || other.gameObject.tag.Contains("Car") || other.gameObject.tag.Contains("EV")))
         {
             StartCoroutine(StunEffect());
         }
