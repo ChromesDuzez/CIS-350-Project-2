@@ -98,7 +98,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isStunned && (other.gameObject.tag.Contains("Bullet") || other.gameObject.tag.Contains("Car") || other.gameObject.tag.Contains("EV")))
+        if (!isStunned && other.gameObject.tag.Contains("Bullet"))
+        {
+            StartCoroutine(StunEffect());
+        }
+
+        if (!isStunned && (other.gameObject.tag.Contains("Car") || other.gameObject.tag.Contains("EV")) && GlobalSettings.carsStun)
         {
             StartCoroutine(StunEffect());
         }

@@ -44,6 +44,8 @@ public class GlobalSettings : MonoBehaviour
     public static bool player2Enabled = false;
     public static bool player2AIEnabled = false;
 
+    //Gamerules
+    public static bool carsStun = true;
 
     //Settings Related to Seeing the Tutorial on the start of the game...
     public static bool hasSeenInfoCard = false;
@@ -63,6 +65,11 @@ public class GlobalSettings : MonoBehaviour
             }
         }
         return Input.GetAxisRaw(axis);
+    }
+
+    public void toggleCarsStun()
+    {
+        carsStun = !carsStun;
     }
 
     public void ResetToDefaultControls()
